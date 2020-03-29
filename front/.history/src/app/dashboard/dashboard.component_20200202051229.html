@@ -1,0 +1,78 @@
+<div fxLayout="row wrap">
+   <div fxFlex.sm="100" fxFlex.xs="100" fxFlex.md="33.33" fxFlex.lg="33.33" fxFlex.xl="33.33" fxFlex="100"
+      class="m-gap p-gap">
+      <mat-card>
+         <div class="card-wheather grad-blue">
+            <div class="city">Comptes</div>
+            <div class="weather">
+               <div class="sun d-flex justify-content-between">
+                  <i class="fa fa-users fa-3x align-self-center"></i>
+                  <div class="temp align-self-center">{{nbCandidates}}</div>
+               </div>
+            </div>
+         </div>
+      </mat-card>
+   </div>
+   <div fxFlex.sm="100" fxFlex.xs="100" fxFlex.md="33.33" fxFlex.lg="33.33" fxFlex.xl="33.33" fxFlex="100"
+      class="m-gap p-gap">
+      <mat-card>
+         <div class="card-wheather grad-green">
+            <div class="city">Demandes List</div>
+            <div class="weather">
+               <div class="sun d-flex justify-content-between">
+                  <i class="fa fa fa-list fa-3x align-self-center"></i>
+                  <div class="temp align-self-center">{{nbElectorals}}</div>
+               </div>
+            </div>
+         </div>
+      </mat-card>
+   </div>
+   <div *ngIf="isAdmin" fxFlex.sm="100" fxFlex.xs="100" fxFlex.md="33.33" fxFlex.lg="33.33" fxFlex.xl="33.33"
+      fxFlex="100" class="m-gap p-gap">
+      <mat-card>
+         <div class="card-wheather grad-red">
+            <div class="city">Users</div>
+            <div class="weather">
+               <div class="sun d-flex justify-content-between">
+                  <i class="fa fa fa-user fa-3x align-self-center"></i>
+                  <div class="temp align-self-center">{{nbUsers}}</div>
+               </div>
+            </div>
+         </div>
+      </mat-card>
+   </div>
+</div>
+<div class="preloader d-flex align-items-center justify-content-center">
+   <div class="lds-ellipsis">
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+   </div>
+</div>
+
+<!-- ##### Header Area Start ##### -->
+<header class="header-area">
+   <!-- Top Header Area -->
+   <div class="top-header-area">
+       <div class="container h-100">
+           <div class="row h-100 align-items-center">
+               <div class="col-12 d-flex justify-content-between">
+                   <!-- Logo Area -->
+                   <div class="logo">
+                   <img src="assets/images/img/core-img/logo.png" alt="">
+                   </div>
+
+                   <!-- Top Contact Info -->
+                   <div class="top-contact-info d-flex align-items-center">
+                       <a href="#" data-toggle="tooltip" data-placement="bottom" title="25 th Street Avenue, Los Angeles, CA"><img src="assets/images/img/core-img/placeholder.png" alt=""> <span>25 th Street Avenue, Los Angeles, CA</span></a>
+                       <a href="#" data-toggle="tooltip" data-placement="bottom" title="office@yourfirm.com"><img src="assets/images/img/core-img/message.png" alt=""> <span>office@yourfirm.com</span></a>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+
+
+
+

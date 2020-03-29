@@ -1,0 +1,125 @@
+<div fxLayout="row wrap">
+   <div fxFlex.sm="100" fxFlex.xs="100" fxFlex.md="33.33" fxFlex.lg="33.33" fxFlex.xl="33.33" fxFlex="100"
+      class="m-gap p-gap">
+      <mat-card>
+         <div class="card-wheather grad-blue">
+            <div class="city">Comptes</div>
+            <div class="weather">
+               <div class="sun d-flex justify-content-between">
+                  <i class="fa fa-users fa-3x align-self-center"></i>
+                  <div class="temp align-self-center">{{nbCandidates}}</div>
+               </div>
+            </div>
+         </div>
+      </mat-card>
+   </div>
+   <div fxFlex.sm="100" fxFlex.xs="100" fxFlex.md="33.33" fxFlex.lg="33.33" fxFlex.xl="33.33" fxFlex="100"
+      class="m-gap p-gap">
+      <mat-card>
+         <div class="card-wheather grad-green">
+            <div class="city">Demandes List</div>
+            <div class="weather">
+               <div class="sun d-flex justify-content-between">
+                  <i class="fa fa fa-list fa-3x align-self-center"></i>
+                  <div class="temp align-self-center">{{nbElectorals}}</div>
+               </div>
+            </div>
+         </div>
+      </mat-card>
+   </div>
+   <div *ngIf="isAdmin" fxFlex.sm="100" fxFlex.xs="100" fxFlex.md="33.33" fxFlex.lg="33.33" fxFlex.xl="33.33"
+      fxFlex="100" class="m-gap p-gap">
+      <mat-card>
+         <div class="card-wheather grad-red">
+            <div class="city">Users</div>
+            <div class="weather">
+               <div class="sun d-flex justify-content-between">
+                  <i class="fa fa fa-user fa-3x align-self-center"></i>
+                  <div class="temp align-self-center">{{nbUsers}}</div>
+               </div>
+            </div>
+         </div>
+      </mat-card>
+   </div>
+</div>
+
+
+
+
+
+    <!-- ##### Call To Action Start ###### -->
+    <section class="cta-area d-flex flex-wrap">
+      <!-- Cta Thumbnail -->
+      <div class="cta-thumbnail bg-img jarallax" style="background-image: url(assets/images/img/bg-img/5.jpg);"></div>
+
+      <!-- Cta Content -->
+      <div class="cta-content">
+          <!-- Section Heading -->
+          <div class="section-heading white">
+              <div class="line"></div>
+              <p>Bold desing and beyound</p>
+              <h2>Helping small businesses like yours</h2>
+          </div>
+          <h6>Morbi ut dapibus dui. Sed ut iaculis elit, quis varius mauris. Integer ut ultricies orci, lobortis egestas sem. Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sod ales. Maecenas sed magna tempor, efficitur maur is in, sollicitudin augue. Praesent pretium finibus quam.</h6>
+          <div class="d-flex flex-wrap mt-50">
+              <!-- Single Skills Area -->
+              <div class="single-skils-area mb-70 mr-5">
+                  <div id="circle" class="circle" data-value="0.90">
+                      <div class="skills-text">
+                          <span>90%</span>
+                      </div>
+                  </div>
+                  <p>Energy</p>
+              </div>
+
+              <!-- Single Skills Area -->
+              <div class="single-skils-area mb-70 mr-5">
+                  <div id="circle2" class="circle" data-value="0.75">
+                      <div class="skills-text">
+                          <span>75%</span>
+                      </div>
+                  </div>
+                  <p>power</p>
+              </div>
+
+              <!-- Single Skills Area -->
+              <div class="single-skils-area mb-70">
+                  <div id="circle3" class="circle" data-value="0.97">
+                      <div class="skills-text">
+                          <span>97%</span>
+                      </div>
+                  </div>
+                  <p>resource</p>
+              </div>
+          </div>
+          <a href="#" class="btn credit-btn box-shadow btn-2">Read More</a>
+      </div>
+  </section>
+  <!-- ##### Call To Action End ###### -->
+
+  <!-- ##### Call To Action Start ###### -->
+  <section class="cta-2-area wow fadeInUp" data-wow-delay="100ms">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <!-- Cta Content -->
+                  <div class="cta-content d-flex flex-wrap align-items-center justify-content-between">
+                      <div class="cta-text">
+                          <h4>Are you in need for a load? Get in touch with us.</h4>
+                      </div>
+                      <div class="cta-btn">
+                          <a href="#" class="btn credit-btn box-shadow">Read More</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- ##### Call To Action End ###### -->
+
+
+
+
+
+
+

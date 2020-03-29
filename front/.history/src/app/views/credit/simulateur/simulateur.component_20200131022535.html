@@ -1,0 +1,72 @@
+<div class="row">
+  <div class="col-lg-12">
+          <form [formGroup]="contactForm">
+                  <h3>Demande de Credit Consommation</h3>
+                  <br>
+                  <br>
+                  <div class="container">
+                          <i class="fa fa-money" aria-hidden="true"> Montant Demandé (en dinars)</i>
+                          <br>
+                          <input formControlName="montant" name="montant"
+                                  class="w3-input w3-border w3-round-large" placeholder="Montant Demandé"
+                                  name="Montant" class="col-lg-5" required>
+                          <div *ngIf="montant.invalid"></div>
+                          <br />
+                          <br />
+                          <i class="fa fa-calendar" aria-hidden="true"> Durée de remboursement (en mois)</i>
+                          <br>
+                          <input formControlName="duree" name="duree" class="w3-input w3-border w3-round-large"
+                                  placeholder="Durée de remboursement" name="Durée" class="col-lg-5" required>
+                          <div *ngIf="duree.invalid"></div>
+                          <br />
+                          <br />
+                          <br />
+                          <table id="table">
+                                  <thead>
+                                          <tr>
+                                                  <th>Montant du Crédit</th>
+                                                  <th>Durée du Crédit</th>
+                                                  <th>Taux Nominal</th>
+                                                  <th>Mensualités</th>
+                                          </tr>
+                                  </thead>
+                                  <td data-title="Montant">{{montant.value}}</td>
+                                  <td data-title="duree">{{duree.value}}</td>
+                                  <td data-title="Taux Nominal">10.4%</td>
+                                  <td data-title="Mensualité">{{mensualite(montant.value,duree.value)}}</td>
+                          </table>
+                  </div>
+          </form>
+  </div>
+</div>
+
+
+
+<div class="row">
+        <div class="col-lg-12">
+                <form [formGroup]="contactForm">
+                        <h3>Simulation Credit Consommation</h3>
+                        <br>
+                        <br>
+                        <div class="container">
+                                <i class="fa fa-money" aria-hidden="true"> Montant Demandé</i>
+                                <br>
+                                <input formControlName="montant" name="montant" type="range" min="10000 mD" max="300000 mD"
+                                        value="10000 mD" step="1000000 mD" class="slider" id="myRange" required>
+                                <div *ngIf="montant.invalid"></div>
+                                <br />
+                                <br />
+                                <i class="fa fa-calendar" aria-hidden="true"> Durée de remboursement</i>
+                                <br>
+                                <br>
+                                <input formControlName="duree" name="duree" type="range" min="3 mois" max="36 mois"
+                                        value="18.5 mois" step="1 mois" class="slider" id="myRange" required>
+                                <div *ngIf="duree.invalid"></div>
+                                <br />
+                                <br />
+                                <button class="btn btn-primary" [disabled]="!contactForm.valid">Lancer la
+                                        Simulation</button>
+                        </div>
+                </form>
+        </div>
+</div>

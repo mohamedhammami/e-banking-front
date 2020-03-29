@@ -1,0 +1,95 @@
+<div class="row">
+  <div class="col-lg-12">
+          <form [formGroup]="contactForm">
+                  <h3>Demande de Credit Consommation</h3>
+                  <br>
+                  <br>
+                  <div class="container">
+                          <i class="fa fa-money" aria-hidden="true"> Montant Demandé (en dinars)</i>
+                          <br>
+                          <input formControlName="montant" name="montant"
+                                  class="w3-input w3-border w3-round-large" placeholder="Montant Demandé" 
+                                  name="Montant" class="col-lg-5" required>
+                                  
+                          <div *ngIf="montant.invalid"></div>
+                          <br />
+                          <br />
+                          <i class="fa fa-calendar" aria-hidden="true"> Durée de remboursement</i>
+                                <br>
+                                <br>
+                                <input formControlName="duree" name="duree" type="range" min="3 mois" max="36 mois"
+                                        value="18.5 mois" step="1 mois" class="slider" id="myRange" required>
+                                <div *ngIf="duree.invalid"></div>
+                                <br />
+                                <br />
+                          <br />
+                          <br />
+                          <br />
+                          <table id="table">
+                                  <thead>
+                                          <tr>
+                                                  <th>Montant du Crédit</th>
+                                                  <th>Durée du Crédit</th>
+                                                  <th>Taux Nominal</th>
+                                                  <th>Mensualités</th>
+                                          </tr>
+                                  </thead>
+                                  <td data-title="Montant">{{montant.value}}</td>
+                                  <td data-title="duree">{{duree.value}}</td>
+                                  <td data-title="Taux Nominal">10.4%</td>
+                                  <td data-title="Mensualité">{{mensualite(montant.value,duree.value)}}</td>
+                          </table>
+
+
+
+
+                        </div>
+                </form>
+        </div>
+      </div>
+      
+      
+                         
+
+
+                          <div fxLayout="row wrap" class="user-list-wrapper">
+    <div class="user-card-w" fxFlex.sm="33.33" fxFlex.md="33.33" fxFlex.lg="33.33" fxFlex.xl="33.33"
+        >
+        <div class="user-list-card">
+            <div class="user-card-cover" style="background-image:url(assets/images/night.jpg)">
+                <div>
+                    <div class="text-center user-thumb">
+                        <img class="img-responsive img-circle"
+                        10.4%  width="120" height="120"
+                             alt="user list image">
+                    </div>
+
+                </div>
+            </div>
+            <div class="user-content">
+                <div class="pad-wrap d-flex justify-content-between mb-1">
+                    <div>
+                        <h4 class="user-name text-primary">{{montant.value}}</h4>
+                        <span class="silk-block mb-1">{{duree.value}}</span>
+                    </div>
+                
+                </div>
+                <span class="d-flex mb-2">
+               <mat-icon>location_on</mat-icon>
+               {{mensualite(montant.value,duree.value)}}
+            </span>
+             
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
